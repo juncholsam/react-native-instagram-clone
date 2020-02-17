@@ -43,11 +43,12 @@ export default class HomeTab extends Component {
     }
 
     render() {
+        
         return (
             <Container style={style.container}>
                 <Content>
                     {
-                        this.state.feeds.map(feed => <CardComponent data={feed} />)
+                        this.state.feeds.map(feed => <CardComponent data={ feed } />)
                     }
                 </Content>
             </Container>

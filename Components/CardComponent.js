@@ -6,11 +6,12 @@ export default class CardCompnent extends Component {
     render() {
         const { data } = this.props; // 피드 항목 데이터
         const { image } = JSON.parse(data.json_metadata); // json_metadata에서 이미지 url을 파싱
+
         return (
             <Card>
                 <CardItem>
                     <Left>
-                        <Thumbnail source={{ uri: 'https://steemitimages.com/u/${data.author}/avatar' }} />
+                        <Thumbnail source={{ uri: `https://steemitimages.com/u/` + data.author + `/avatar`}} />
                         <Body>
                             <Text>{data.author}</Text>
                             <Text note>{new Date(data.created).toDateString()}</Text>
@@ -33,7 +34,7 @@ export default class CardCompnent extends Component {
                 </CardItem>
                 <CardItem>
                     <Text>
-                        {data.body.replace(/\n/g, ' ').slice(0, 200)}
+                        {data.body.slice(0, 200)}
                     </Text>
                 </CardItem>
                 <CardItem style={{ height: 20 }}>
