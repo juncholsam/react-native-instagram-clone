@@ -26,7 +26,7 @@ const AppTabNavigator = createMaterialTopTabNavigator({
         style: {
             backgroundColor: 'white',
         },
-        iconStyle: { height: 50 },
+        iconStyle: { height: 40 },
         activeTintColor: '#000',
         inactiveTintColor: '#d1cece',
         upperCaseLabel: false,
